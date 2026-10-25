@@ -18,7 +18,7 @@ class Odometry:
 
     def update(self, left_distance: float, right_distance: float, wheel_separation: float) -> None:
         """Update the estimated pose using measured wheel travel distances."""
-                     
+                        
         delta_s = calculate_center_distance(left_distance, right_distance)
         delta_theta = calculate_heading_change(left_distance, right_distance, wheel_separation)
         delta_x, delta_y = calculate_displacement_midpoint(delta_s, self.pose.theta, delta_theta)
