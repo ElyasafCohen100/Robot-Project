@@ -54,7 +54,7 @@ def main() -> None:
          wheel_diameter = wheel_diameter
      )
  
-     odometry.update(
+     odometry.update_with_encoders(
          left_distance = left_distance,
          right_distance = right_distance,
          wheel_separation = wheel_separation

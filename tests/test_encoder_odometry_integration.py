@@ -27,7 +27,7 @@ def test_encoder_odometry_straight_motion() -> None:
         wheel_diameter = 0.1
     )
 
-    odometry.update(
+    odometry.update_with_encoders(
         left_distance = left_distance,
         right_distance = right_distance,
         wheel_separation = 0.5

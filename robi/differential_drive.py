@@ -38,6 +38,6 @@ def calculate_heading_change(left_distance: float, right_distance:float, wheel_s
     if wheel_separation <= 0:
         raise ValueError("Wheel separetion must be positive")
     
-    return(right_distance-left_distance) / wheel_separation
+    return(right_distance - left_distance) / wheel_separation
 
 # ================================================================================== #

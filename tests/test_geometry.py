@@ -11,6 +11,7 @@ from robi.geometry import (
 # ======================================================================= #
 def test_shortest_angular_distance() -> None:
     """Check that the shortest turn is calculated correctly."""
+    
     current = math.radians(350)
     target = math.radians(10)
 
@@ -21,6 +22,7 @@ def test_shortest_angular_distance() -> None:
 # ======================================================================= #
 def test_calculate_displacement_fixed_heading() -> None:
     """Check the movement calculated from speed, direction, and time."""
+    
     delta_x, delta_y = calculate_displacement_fixed_heading(
         linear_velocity=2.0,
         theta=0.0,
