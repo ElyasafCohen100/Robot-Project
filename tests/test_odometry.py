@@ -144,3 +144,29 @@ def test_odometry_with_gyro_negative_delta_t() -> None:
     assert odometry.pose.theta == pytest.approx(0.0)
     
 # ========================================================================================================== #
+
+
+
+# sensor_fusion #
+# ========================================================================================================== #
+
+def test_odometry_with_sensor_fusion_curved_motion() -> None:
+    """Verify that fused sensor data updates the robot's pose."""
+    
+    odometry = Odometry()
+    
+    odometry.update_with_sensor_fusion(
+        left_distance=0.4,
+        right_distance=0.6,
+        wheel_separation=0.5,
+        angular_velocity_z=0.6,
+        delta_t=1.0,
+        alpha=0.5
+    )
+
+    assert odometry.pose.x == pytest.approx(0.5 * math.cos(0.25))
+    assert odometry.pose.y == pytest.approx(0.5 * math.sin(0.25))
+    assert odometry.pose.theta == pytest.approx(0.5)
+
+# ========================================================================================================== #
+

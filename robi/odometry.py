@@ -4,6 +4,7 @@ import math
 
 from robi.pose_2d import Pose2D
 from robi.imu import calculate_gyro_heading_change
+from robi.sensor_fusion import fuse_heading_changes
 from robi.geometry import calculate_displacement_midpoint
 from robi.differential_drive import(calculate_center_distance, calculate_heading_change)
 
@@ -54,3 +55,24 @@ class Odometry:
         
 # ================================================================================================================= #
 
+    def update_with_sensor_fusion(
+        self,
+        left_distance: float,
+        right_distance: float,
+        wheel_separation: float,
+        angular_velocity_z: float,
+        delta_t: float,
+        alpha: float
+    ) -> None:
+        
+        """Update the estimated pose using fused encoder and gyroscope data."""
+        
+        delta_s = calculate_center_distance(left_distance, right_distance)
+        
+        encoder_delta_theta = calculate_heading_change(left_distance, right_distance, wheel_separation)
+        gyro_delta_theta = calculate_gyro_heading_change(angular_velocity_z, delta_t)
+        
+        fused_delta_theta = fuse_heading_changes(encoder_delta_theta, gyro_delta_theta, alpha)
+        self._update_pose(delta_s, fused_delta_theta) 
+        
+# ================================================================================================================= #
