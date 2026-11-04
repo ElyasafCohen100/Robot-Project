@@ -3,7 +3,7 @@
 import math
 import pytest
 
-from robi.odometry import Odometry
+from robi.localization.odometry import Odometry
 
 
 # encoders's tests #

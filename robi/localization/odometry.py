@@ -2,11 +2,11 @@
 
 import math
 
-from robi.pose_2d import Pose2D
-from robi.imu import calculate_gyro_heading_change
-from robi.sensor_fusion import fuse_heading_changes
-from robi.geometry import calculate_displacement_midpoint
-from robi.differential_drive import(calculate_center_distance, calculate_heading_change)
+from robi.core.pose_2d import Pose2D
+from robi.sensors.gyroscope import calculate_gyro_heading_change
+from robi.localization.sensor_fusion import fuse_heading_changes
+from robi.core.geometry import calculate_displacement_midpoint
+from robi.motion.differential_drive import(calculate_center_distance, calculate_heading_change)
 
 
 class Odometry:

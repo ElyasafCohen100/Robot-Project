@@ -2,8 +2,8 @@ import math
 import pytest
 
 from robi.robot import Robot
-from robi.geometry import calculate_displacement_fixed_heading
-from robi.geometry import shortest_angular_distance
+from robi.core.geometry import calculate_displacement_fixed_heading
+from robi.core.geometry import shortest_angular_distance
 
 
 # ========================== Test robot movement, rotation, and angle calculations. ========================== #

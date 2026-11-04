@@ -3,7 +3,7 @@
 import math
 import pytest
 
-from robi.encoders import calculate_wheel_distance
+from robi.sensors.encoders import calculate_wheel_distance
 
 # ========================================================================================================== #
 

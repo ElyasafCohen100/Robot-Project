@@ -3,9 +3,9 @@
 
 import math
 
-from .pose_2d import Pose2D
-from .geometry import shortest_angular_distance, calculate_displacement_fixed_heading
-from .differential_drive import calculate_angular_velocity, calculate_linear_velocity
+from .core.pose_2d import Pose2D
+from .core.geometry import shortest_angular_distance, calculate_displacement_fixed_heading
+from .motion.differential_drive import calculate_angular_velocity, calculate_linear_velocity
 
 
 class Robot:

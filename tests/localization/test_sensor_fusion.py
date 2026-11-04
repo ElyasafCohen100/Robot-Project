@@ -3,8 +3,8 @@
 import math
 import pytest
 
-from robi.odometry import Odometry
-from robi.sensor_fusion import fuse_heading_changes
+from robi.localization.odometry import Odometry
+from robi.localization.sensor_fusion import fuse_heading_changes
 
 # ============================================================================================ #
 

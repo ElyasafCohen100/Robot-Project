@@ -5,8 +5,8 @@ import math
 import pytest
 
 # integration test (encoders & odometry) #
-from robi.odometry import Odometry
-from robi.encoders import calculate_wheel_distance
+from robi.localization.odometry import Odometry
+from robi.sensors.encoders import calculate_wheel_distance
 
 # ============================================================================================ #
 

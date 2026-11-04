@@ -1,7 +1,7 @@
 """Test gyroscope-based heading calculations."""
 
 import pytest
-from robi.imu import calculate_gyro_heading_change
+from robi.sensors.gyroscope import calculate_gyro_heading_change
 
 
 # angular velocity #

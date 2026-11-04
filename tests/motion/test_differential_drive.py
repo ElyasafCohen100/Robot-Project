@@ -1,7 +1,7 @@
 
 import pytest
 
-from robi.differential_drive import (
+from robi.motion.differential_drive import (
     calculate_linear_velocity, 
     calculate_angular_velocity
     )

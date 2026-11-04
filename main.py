@@ -3,8 +3,8 @@
 import math
 
 from robi.robot import Robot
-from robi.odometry import Odometry
-from robi.encoders import calculate_wheel_distance
+from robi.localization.odometry import Odometry
+from robi.sensors.encoders import calculate_wheel_distance
 
 # ================================================================================== #
 

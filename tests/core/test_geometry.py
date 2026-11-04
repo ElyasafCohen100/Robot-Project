@@ -1,7 +1,7 @@
 import math
 import pytest
 
-from robi.geometry import (
+from robi.core.geometry import (
     shortest_angular_distance,
     calculate_displacement_fixed_heading,
 )
