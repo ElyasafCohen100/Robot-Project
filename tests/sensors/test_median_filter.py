@@ -175,7 +175,7 @@ def test_median_filter_calculates_median_after_window_slides() -> None:
     median_filter = MedianFilter(window_size = 3)
 
     for measurement in [1.0, 1.2, 0.9, 5.0, 1.1]:
-        median_filter.add_measurement(measurement)
+        median_filter.add_measurement(measurement)  
 
     assert median_filter.measurements == [0.9, 5.0, 1.1]
     assert median_filter.get_median() == pytest.approx(1.1)
