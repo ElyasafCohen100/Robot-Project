@@ -181,3 +181,4 @@ def test_median_filter_calculates_median_after_window_slides() -> None:
     assert median_filter.get_median() == pytest.approx(1.1)
     
 # ================================================================================ # 
+

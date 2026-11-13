@@ -1,9 +1,10 @@
 
 from statistics import median
+from robi.motion.motion_command import MotionCommand
 
 
 class MedianFilter:
-    """Maintain a sliding window of sensor measurements."""
+    """Store recent sensor measurements and calculate their median to reduce noise."""
     
 # ================================================================================== #
 
@@ -37,6 +38,3 @@ class MedianFilter:
         return median(self.measurements)
     
 # ================================================================================== #
-
-
-        

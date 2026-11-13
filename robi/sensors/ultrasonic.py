@@ -1,5 +1,6 @@
 
-"""Calculate distances from ultrasonic sensor measurements."""
+"""Calculate obstacle distances from ultrasonic echo times and check if obstacles are too close."""
+
 
 # ======================================================================================== #
 
@@ -28,4 +29,3 @@ def is_obstacle_too_close(distance: float, threshold: float = 0.5) -> bool:
     return distance < threshold
 
 # ======================================================================================== #
-
