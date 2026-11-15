@@ -7,11 +7,10 @@ class RobotController:
 # ================================================================================== #
 
     def decide_motion(self, distance: float) -> MotionCommand:
-         """Choose a motion command based on obstacle distance."""
+        """Choose a motion command based on obstacle distance."""
 
-         if is_obstacle_too_close(distance):
-             return MotionCommand.STOP  
+        if is_obstacle_too_close(distance):
+            return MotionCommand.STOP  
 
-
-         return MotionCommand.MOVE_FORWARD
+        return MotionCommand.MOVE_FORWARD
 # ================================================================================== #
